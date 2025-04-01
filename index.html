@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Solana CEX">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Solana CEX</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .loader-container {
+      text-align: center;
+    }
+
+    .loader {
+      width: 120px;
+      height: 120px;
+      position: relative;
+      margin: 0 auto 20px;
+    }
+
+    .loader-circle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 4px solid transparent;
+      border-radius: 50%;
+      animation: rotate 2s linear infinite;
+    }
+
+    .loader-circle:nth-child(1) {
+      border-top-color: #FFD700;
+      animation-delay: 0s;
+    }
+
+    .loader-circle:nth-child(2) {
+      border-right-color: #FFD700;
+      animation-delay: 0.5s;
+    }
+
+    .loader-circle:nth-child(3) {
+      border-bottom-color: #FFD700;
+      animation-delay: 1s;
+    }
+
+    .loader-circle:nth-child(4) {
+      border-left-color: #FFD700;
+      animation-delay: 1.5s;
+    }
+
+    .loader-text {
+      color: #FFD700;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    .loader-subtext {
+      color: #888;
+      font-size: 16px;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 0.6;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0.6;
+      }
+    }
+
+    .progress-bar {
+      width: 200px;
+      height: 4px;
+      background: rgba(255, 215, 0, 0.2);
+      border-radius: 2px;
+      margin: 20px auto;
+      overflow: hidden;
+    }
+
+    .progress {
+      width: 0%;
+      height: 100%;
+      background: #FFD700;
+      animation: progress 2s ease-in-out infinite;
+    }
+
+    @keyframes progress {
+      0% {
+        width: 0%;
+      }
+      50% {
+        width: 100%;
+      }
+      100% {
+        width: 0%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-container">
+    <div class="loader">
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+    </div>
+    <div class="loader-text">Solana CEX</div>
+    <div class="loader-subtext">Loading your trading experience...</div>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
